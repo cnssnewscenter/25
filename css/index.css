@@ -167,6 +167,13 @@
   opacity: 0;
   /*z-index: -1;*/
 }
+.btn-very-huge {
+  display: block;
+  margin: auto;
+  max-width: 600px;
+  background-color: #5785cf !important;
+  border-color: #456caa !important;
+}
 .footer img:hover + .qrcode img {
   display: block;
   opacity: 1;
