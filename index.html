@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/index.css">
+        <meta name="viewport" content="width=device-width, inital-scale=1, maximum-scale=1, user-scalable=no">
+    </head>
+    <script id="template" type="x-tpl-mustache">
+    {{#data}}
+    <div class="section">
+        <div class="container">
+            <div class="title"><span>{{name}}</span></div>
+            <span class="dep">{{dep}}</span>
+            <div class="row">
+                <div class="col-sm-12 intro">{{intro}}</div>
+                <div class="col-sm-6 p">
+                    <a href="{{link}}"><img class="pic" src="img/pic/{{pic}}" alt=""></a>
+                </div>
+                <div class="col-sm-6 t">
+                    <div class="text">
+                        <strong>项目简介：</strong>
+                        <p>
+                            {{{desc}}}
+                        </p>
+                    </div>
+                    <p class="text-center">
+                        <a class="btn btn-large btn-default" href="{{link}}">观看视频</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/data}}
+    </script>
+    <body>
+        <div class="head">
+            <div class="logos text-left container">
+                <div class="logos-wrapper">
+                    <img src="img/logo.png" class="logo pull-left">
+                    <div class="pull-right">
+                        <a href="http://www.uestc.edu.cn">学校主页</a>
+                        <a href="http://www.new1.uestc.edu.cn" class="">新闻中心</a>
+                        <a href="http://www.new1.uestc.edu.cn/category/index/id/1">关注</a>
+                        <input placeholder="搜索" type="text">
+                    </div>
+                </div>
+                <img src="img/title.png" class="title img-responsive">
+            </div>
+        </div>
+        <div class="content target">
+            
+        </div>
+        
+        <div class="footer">
+            <div class="container">
+                <p class="address"><a href="#" target="_blank">关于我们</a><a href="http://nav.uestc.edu.cn/" target="_blank">成电导航</a><a href="http://www.epptime.com/" target="_blank">卓拙科技</a><a href="https://cnssuestc.org/" target="_blank">凝聚网络安全工作室</a><a href="http://www.jg.uestc.edu.cn/" target="_blank">机关党委网</a><a href="http://www.univs.cn/" target="_blank">中国大学生在线</a></p>
+                <p class="copy1">© 2017 电子科技大学新闻中心</p>
+                <p class="grey">TEL:028-61831278 / 028-61830213(清水河校区)&nbsp;&nbsp;&nbsp;&nbsp;028-83202219(沙河校区)</p>
+                <p class="grey"><a href="mailto:xwzx@uestc.edu.cn">xwzx@uestc.edu.cn</a></p>
+                <div class="grey contact">
+                    <a href="#" target="_blank">
+                        <img src="img/footer-weixin.gif">
+                        <i class="qrcode"><img src="img/erweima.jpg"></i>
+                    </a>
+                    <a href="http://weibo.com/u/3982954755" target="_blank">
+                        <img src="img/footer-weibo.gif">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="img/footer-book.gif">
+                        <i class="qrcode book"><img src="img/bookQR.jpg"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="img/footer-rss.gif">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/mustache.min.js"></script>
+        <script>
+            data = []
+            $(function(){
+                var temp = $('#template').html();
+                Mustache.parse(temp);
+                $.getJSON('data.json', {}, function(data){
+                    console.log(data)
+                    $('.target').append(Mustache.render(temp, {data:data}));
+                })
+            })
+        </script>
+    </body>
+</html>
