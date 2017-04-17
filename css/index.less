@@ -78,7 +78,17 @@
                 bottom: 0;
             }
             background-color: #ffb800;
-            padding: 5px 100px;
+            @media (min-width: 768px) {
+                padding: 5px 100px;
+            }
+            @media (max-width: 768px) {
+                display: block;
+                margin-right: 10px;
+                text-align: center;
+                line-height: 50px;
+                font-size: 2rem;
+                vertical-align: middle;
+            }
             color: white;
             font-size: 3rem;
             font-weight: 900;
@@ -110,8 +120,10 @@
                     border-bottom: @height/2 solid #84ace1;
                 }
             }
-            .p{
-                float: right;
+            @media (min-width: 768px) {
+                .p{
+                    float: right;
+                }
             }
             .btn.btn-default{
                 background-color: #95ba12;
@@ -124,9 +136,16 @@
     }
 }
 .dep {
-    float: right;
+    @media (min-width: 768px) {
+        float: right;
+    }
     position: relative;
     top: 20px;
+    @media (max-width: 768px) {
+        margin-bottom: 1em;
+        display: block;
+        text-align: right;
+    }
 }
 .intro {
     text-indent: 2em;
@@ -204,26 +223,30 @@ span.notice{
 .logos{
     padding-bottom: 2rem;
 }
-div.text{
-    padding-bottom: 66.7%;
-    position: relative;
-    height: 0;
-    strong {
-        position: absolute;
+@media (min-width: 768px) {
+    div.text{
+        padding-bottom: 66.7%;
+        position: relative;
+        height: 0;
+
+        strong {
+            position: absolute;
+        }
+        p {
+            position: absolute;
+            top: 0;
+            bottom: 60px;
+            right: 0;
+            left: 5em;
+            overflow-y: scroll;
+        }
     }
-    p {
-        position: absolute;
-        top: 0;
-        bottom: 60px;
-        right: 0;
-        left: 5em;
-        overflow-y: scroll;
+    p.text-center {
+        position: relative;
+        top: -60px;
     }
 }
-p.text-center {
-    position: relative;
-    top: -60px;
-}
+
 .btn-large{
     padding: 1rem 5rem;
 }
