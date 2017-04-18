@@ -10,6 +10,11 @@
   text-align: center;
   padding-top: 20px;
 }
+@media (max-width: 768px) {
+  .head {
+    height: 300px;
+  }
+}
 .head .logos-wrapper {
   height: 64px;
   line-height: 64px;
@@ -160,6 +165,7 @@
   font-size: 14pt;
   font-weight: 900;
   line-height: 1.6;
+  letter-spacing: 1px;
 }
 .fullwidth {
   width: 100%;
@@ -223,6 +229,7 @@ span.notice {
 }
 div.text {
   line-height: 1.6;
+  letter-spacing: 1px;
 }
 #activity_intro .modal-body {
   text-indent: 2em;
