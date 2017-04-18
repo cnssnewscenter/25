@@ -6,6 +6,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  height: 480px;
   text-align: center;
   padding-top: 20px;
 }
@@ -33,7 +34,8 @@
   margin: 2em 0;
 }
 .head .title {
-  padding: 30px 10px 70px 10px;
+  margin: auto;
+  padding-top: 100px;
 }
 .content .section {
   padding: 60px 0;
@@ -129,8 +131,8 @@
   }
 }
 .content .section:nth-child(2n) .btn.btn-default {
-  background-color: #95ba12;
-  border-color: #85a710;
+  background-color: #5785cf;
+  border-color: #4770b1;
 }
 .content .section:last-of-type {
   padding-bottom: 80px;
@@ -138,6 +140,7 @@
 .dep {
   position: relative;
   top: 20px;
+  font-weight: 900;
 }
 @media (min-width: 768px) {
   .dep {
@@ -153,9 +156,10 @@
 }
 .intro {
   text-indent: 2em;
-  margin: 1em 0 2em 0;
+  margin: 2em 0;
   font-size: 14pt;
-  font-weight: 700px;
+  font-weight: 900;
+  line-height: 1.6;
 }
 .fullwidth {
   width: 100%;
@@ -217,6 +221,9 @@
 span.notice {
   border-bottom: dotted 2px #CCC;
 }
+div.text {
+  line-height: 1.6;
+}
 #activity_intro .modal-body {
   text-indent: 2em;
 }
@@ -238,7 +245,7 @@ span.notice {
     bottom: 60px;
     right: 0;
     left: 5em;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
   p.text-center {
     position: relative;

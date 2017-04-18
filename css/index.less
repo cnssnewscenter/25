@@ -6,6 +6,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    height: 480px;
     text-align: center;
     padding-top: 20px;
     .logos-wrapper{
@@ -32,7 +33,8 @@
         margin: 2em 0;
     }
     .title{
-        padding:30px 10px 70px 10px;
+        margin: auto;
+        padding-top: 100px;
     }
 }
 .content{
@@ -126,8 +128,8 @@
                 }
             }
             .btn.btn-default{
-                background-color: #95ba12;
-                border-color: #85a710;
+                background-color: #5785cf;
+                border-color: #4770b1;
             }
         }
         &:last-of-type{
@@ -141,6 +143,7 @@
     }
     position: relative;
     top: 20px;
+    font-weight: 900;
     @media (max-width: 768px) {
         margin-bottom: 1em;
         display: block;
@@ -149,9 +152,10 @@
 }
 .intro {
     text-indent: 2em;
-    margin: 1em 0 2em 0;
+    margin: 2em 0;
     font-size: 14pt;
-    font-weight: 700px;
+    font-weight: 900;
+    line-height: 1.6;
 }
 
 .fullwidth{
@@ -217,6 +221,9 @@
 span.notice{
     border-bottom: dotted 2px #CCC;
 }
+div.text{
+    line-height: 1.6;
+}
 #activity_intro .modal-body{
     text-indent: 2em;
 }
@@ -238,7 +245,7 @@ span.notice{
             bottom: 60px;
             right: 0;
             left: 5em;
-            overflow-y: scroll;
+            overflow-y: auto;
         }
     }
     p.text-center {
