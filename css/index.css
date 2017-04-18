@@ -167,6 +167,9 @@
   line-height: 1.6;
   letter-spacing: 1px;
 }
+.intro p {
+  margin: 0;
+}
 .fullwidth {
   width: 100%;
 }
@@ -259,7 +262,12 @@ div.text {
     top: -60px;
   }
 }
+table.table {
+  margin-top: 1em;
+}
+td,
 th {
+  border: solid 1px black !important;
   text-align: center;
 }
 .btn-large {
